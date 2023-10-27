@@ -1,0 +1,16 @@
+const char nop = 0x00; // does nothing
+const char add = 0x01; // add r1 and r2 so that r1 = r1 + r2
+const char sub = 0x02; // sub r1 and r2 so that r1 = r1 - r2
+const char mul = 0x03; // mul r1 and r2 so that r1 = r1 * r2
+const char l1i = 0x04; // l1i loads imediate value into r1
+const char l2i = 0x05; // l2i loads imediate value into r2
+const char mrx = 0x06; // mrx copys value from r1 to r2 or from r2 to r3 or r3 to r4 or from r4 to r1
+const char cmp = 0x07; // compares value of r1 to r2 and sets true flag if compare = true
+const char mov = 0x08; // copys value from one memory address(8bit) to other address(8bit)
+const char jif = 0x09; // jumps if the true flag is true
+const char jiz = 0x0A; // jumps if the zero flag is true
+const char jic = 0x0B; // jumps if the carry flag is true
+const char jio = 0x0C; // jumps if the overflow flag is true
+const char mvm = 0x0D; // copys data to one pixel on screen. x and y from r1 and r2 respectivly. r, g and b from memory addresses 0, 1 and 2 color range 0 -> 15
+const char ldm = 0x0E; // copys value from r1 into memory address
+const char ldr = 0x0F; // copys value from memory address into r1
